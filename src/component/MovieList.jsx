@@ -8,7 +8,7 @@ const MovieList = ({ movieData, title, rating }) => {
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
-        gap: "1rem",
+        gap: "4rem",
       }}
     >
       {movieData

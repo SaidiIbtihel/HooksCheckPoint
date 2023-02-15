@@ -1,13 +1,13 @@
 import React from "react";
 import Rate from "./Rate";
-
+import { Link } from "react-router-dom";
 const MovieCard = ({ movie }) => {
-  const { title, description, image, rating } = movie;
+  const { title, description, image, rating, id } = movie;
   return (
     <div>
       <div
         className="card"
-        style={{ width: "18rem", padding: " 15px ", margin: "15px" }}
+        style={{ width: "18rem", padding: " 20px ", margin: "45px" }}
       >
         <img src={image} alt="" className="card-img-top" />
 
@@ -15,10 +15,9 @@ const MovieCard = ({ movie }) => {
 
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
-          <p className="card-text">{description}</p>
-          <a href="#!" className="btn btn-primary">
+          <Link to={`/movie/${id}`} className="btn btn-primary ">
             Read more
-          </a>
+          </Link>
         </div>
       </div>
     </div>
